@@ -1,0 +1,138 @@
+
+$colors: (
+    primary: #005dff,
+    secondary: rgba(235, 229, 220, 0.87),
+    tertiary: #fcfc,
+);
+
+
+
+@function color($color-name) {
+    @return map-get($colors, $color-name)
+};
+
+
+
+body {
+  background-image: url("dine.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: Verdana;
+  background-color: black;
+  overflow: hidden;
+  
+}
+
+.bg-text {
+    background-color: rgba(0,0,0, 0.4); /*black with opacity see through */
+    color: white;
+    font-weight: bold;
+    border: 3px solid #f1f1f1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 60%;
+    padding: 20px;
+    text-align: center;
+}
+
+
+marquee {
+ font-family: 'Dancing Script', cursive;
+ font-size: 40px;
+ color: color(secondary);
+}
+
+.sidebar{
+    position: fixed;
+    top: 0;
+    left:-250px;
+    background: color(secpndary);
+    width: 250px;
+    height: 100%;
+    transition: .9s;
+}
+
+.active{
+    left:0px;
+}
+ul {
+    margin: 0;
+    padding: 20px 0;
+}
+
+ul li {
+    list-style: none;
+}
+
+ul li a { 
+    padding: 10px 20px;
+    color: #fff;
+    display: block;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(0,0,0,.2);
+
+}
+
+.sidebarBtn {
+    position: absolute;
+    top: 0;
+    right: -50px;
+    width: 50px;
+    height: 50px;
+    box-sizing: border-box;
+    cursor: pointer;
+    background: #f5f5f5;
+    border: none;
+    outline: none;
+}
+
+.sidebarBtn span {
+    display: block;
+    width: 35px;
+    height: 3px;
+    background: #262626;
+    position: absolute;
+    top: 24px;
+    transition: .3s;
+}
+
+.sidebarBtn span:before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: #262626;
+    transition: .3s
+}
+
+.sidebarBtn span:after {
+    content: '';
+    position: absolute;
+    top:10px;
+    left:0;
+    width: 100%;
+    height: 3px;
+    background: #262626;
+    transition: .3s;
+}
+
+.sidebarBtn.toggle span {
+background: transparent;
+}
+
+.sidebarBtn.toggle span:before {
+    top: 0;
+    transform: rotate(45deg);
+}
+
+.sidebarBtn.toggle span:after {
+    top: 0;
+    transform: rotate(-45deg);
+}
