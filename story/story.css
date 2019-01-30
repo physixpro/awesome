@@ -1,37 +1,38 @@
 body {
-  background-image: url("dine.jpg");
+  background: url("chairs.jpg");
   background-size: cover;
-  background-repeat: no-repeat;
-  margin: 0;
-  padding: 0;
-  font-family: Verdana;
-  background-color: black;
-  overflow: hidden;
-}
-
-.bg-text {
-  background-color: rgba(0, 0, 0, 0.4);
-  /*black with opacity see through */
-  color: white;
-  font-weight: bold;
-  border: 3px solid #f1f1f1;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  z-index: 2;
-  width: 60%;
-  padding: 20px;
-  text-align: center;
+  z-index: 1;
 }
 
-marquee {
-  font-family: 'Dancing Script', cursive;
-  font-size: 40px;
-  color: rgba(235, 229, 220, 0.5);
+.content {
+  position: relative;
+  top: 7em;
+  left: 25%;
+  width: 50%;
+  z-index: 50;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-style: solid;
+  border-width: 5px 5px 5px 5px;
+  padding: 70px;
+  font-family: 'ZCOOL XiaoWei', serif;
+  padding-top: 90px;
 }
 
+.content h1 {
+  font-family: 'ZCOOL XiaoWei', serif;
+  position: absolute;
+  top: 0%;
+  left: 6em;
+  color: #efef;
+}
+
+.content p {
+  color: #efef;
+  font-size: 20px;
+}
+
+/* sidebar css*/
 .sidebar {
   position: fixed;
   top: 0;
@@ -128,4 +129,4 @@ ul li a {
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
 }
-/*# sourceMappingURL=lim.css.map */
+/*# sourceMappingURL=story.css.map */

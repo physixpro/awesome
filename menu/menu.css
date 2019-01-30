@@ -1,0 +1,22 @@
+body {
+  background-color: black;
+}
+
+.text {
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.text h1 {
+  position: relative;
+  color: white;
+}
+
+.text h2 {
+  color: white;
+}
+/*# sourceMappingURL=menu.css.map */

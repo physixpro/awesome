@@ -1,0 +1,31 @@
+$colors:( primary: #fefe,
+secondary: rgba(0,0,0,0.2),
+);
+
+@function color($color-name){
+    @return map-get($colors, $color-name )
+};
+
+
+
+body  {
+   background-color: black;
+   
+}
+
+.text{
+    display: grid;
+    justify-items: center;
+    justify-content: center;
+    
+
+}
+.text h1 {
+    position: relative;
+    color: white;
+    
+}
+
+.text h2 {
+    color: white;
+}

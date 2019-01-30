@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="menu/menu.css" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+</head>
+<body>
+
+
+    <script>
+var i = 0; 			// Start Point
+var images = [];	// Images Array
+var time = 3000;	// Time Between Switch
+	 
+// Image List
+images[0] = "menu/a1.jpeg";
+images[1] = "menu/a2.jpeg";
+images[2] = "menu/a3.jpeg";
+images[3] = "menu/a4.jpeg";
+
+// Change Image
+function changeImg(){
+	document.slide.src = images[i];
+
+	// Check If Index Is Under Max
+	if(i < images.length - 1){
+	  // Add 1 to Index
+	  i++; 
+	} else { 
+		// Reset Back To O
+		i = 0;
+	}
+
+	// Run function every x seconds
+	setTimeout("changeImg()", time);
+}
+
+// Run function when page loads
+window.onload=changeImg;
+    </script>
+
+<img name = "slide" width="50%" height="50%" alt="">
+
+
+<div class="text">
+    <h1>Follow Us On Social Media!</h1>
+    <h2>Facebook <i class="fab fa-facebook"></i> &nbsp;&nbsp;&nbsp;&nbsp; Instagram <i class="fab fa-instagram"></i>&nbsp;&nbsp;&nbsp;&nbsp;  Twitter <i class="fab fa-twitter-square"></i> </h2>
+    </div>
+
+</div>
+    </body>
